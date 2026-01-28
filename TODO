@@ -1,0 +1,13 @@
+rootdir -DONE
+AndroidBoard.mk -DONE
+AndroidProducts.mk -DONE
+BoardConfig.mk -DONE
+cm.mk -DONE
+device_tb3710i_lenovo.mk -DONE
+kernel -DONE
+system.prop -DONE
+vendorsetup.sh -DONE
+extract-files.sh -DONE
+set-makefiles.sh -DONE
+
+Approved for first compilation
