@@ -631,13 +631,18 @@ typedef struct {
     gps_location_callback location_cb;
     gps_status_callback status_cb;
     gps_sv_status_callback sv_status_cb;
-    gnss_sv_status_callback gnss_sv_status_cb;
+    // Standard order: nmea_cb MUST follow sv_status_cb
     gps_nmea_callback nmea_cb;
     gps_set_capabilities set_capabilities_cb;
     gps_acquire_wakelock acquire_wakelock_cb;
     gps_release_wakelock release_wakelock_cb;
     gps_create_thread create_thread_cb;
     gps_request_utc_time request_utc_time_cb;
+
+    /** * Added GNSS callback. Moved to the end of the struct
+     * to prevent shifting the standard Android 5.1 pointers.
+     */
+    gnss_sv_status_callback gnss_sv_status_cb;
 } GpsCallbacks;
 
 
